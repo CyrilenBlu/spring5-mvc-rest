@@ -1,7 +1,7 @@
-package blue.springframework.api.v1.mapper;
+package blue.springframework.spring5mvcrest.api.v1.mapper;
 
-import blue.springframework.api.v1.model.CategoryDTO;
-import blue.springframework.domain.Category;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryDTO;
+import blue.springframework.spring5mvcrest.domain.Category;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

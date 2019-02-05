@@ -1,9 +1,9 @@
-package blue.springframework.services;
+package blue.springframework.spring5mvcrest.services;
 
-import blue.springframework.api.v1.mapper.CategoryMapper;
-import blue.springframework.api.v1.model.CategoryDTO;
-import blue.springframework.domain.Category;
-import blue.springframework.repositories.CategoryRepository;
+import blue.springframework.spring5mvcrest.api.v1.mapper.CategoryMapper;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryDTO;
+import blue.springframework.spring5mvcrest.domain.Category;
+import blue.springframework.spring5mvcrest.repositories.CategoryRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;

@@ -1,7 +1,9 @@
-package blue.springframework.bootstrap;
+package blue.springframework.spring5mvcrest.bootstrap;
 
-import blue.springframework.domain.Category;
-import blue.springframework.repositories.CategoryRepository;
+import blue.springframework.spring5mvcrest.domain.Category;
+import blue.springframework.spring5mvcrest.domain.Customer;
+import blue.springframework.spring5mvcrest.repositories.CategoryRepository;
+import blue.springframework.spring5mvcrest.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -9,9 +11,11 @@ import org.springframework.stereotype.Component;
 public class Bootstrap implements CommandLineRunner {
 
     private CategoryRepository categoryRepository;
+    private CustomerRepository customerRepository;
 
-    public Bootstrap(CategoryRepository categoryRepository) {
+    public Bootstrap(CategoryRepository categoryRepository, CustomerRepository customerRepository) {
         this.categoryRepository = categoryRepository;
+        this.customerRepository = customerRepository;
     }
 
     @Override
@@ -39,5 +43,20 @@ public class Bootstrap implements CommandLineRunner {
 
 
         System.out.println("Data Loaded = " + categoryRepository.count() );
+
+        Customer customer1 = new Customer();
+        customer1.setFirstname("Susan");
+        customer1.setLastname("Tanner");
+
+        Customer customer2 = new Customer();
+        customer2.setFirstname("Jake");
+        customer2.setLastname("Systen");
+
+        customerRepository.save(customer1);
+        customerRepository.save(customer2);
+
+        System.out.println("Data Loaded = " + categoryRepository.count() );
+
+
     }
 }

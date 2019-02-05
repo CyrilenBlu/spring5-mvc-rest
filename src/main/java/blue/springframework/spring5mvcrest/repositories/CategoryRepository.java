@@ -1,6 +1,6 @@
-package blue.springframework.repositories;
+package blue.springframework.spring5mvcrest.repositories;
 
-import blue.springframework.domain.Category;
+import blue.springframework.spring5mvcrest.domain.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {

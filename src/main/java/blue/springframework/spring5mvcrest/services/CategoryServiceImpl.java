@@ -1,8 +1,8 @@
-package blue.springframework.services;
+package blue.springframework.spring5mvcrest.services;
 
-import blue.springframework.api.v1.mapper.CategoryMapper;
-import blue.springframework.api.v1.model.CategoryDTO;
-import blue.springframework.repositories.CategoryRepository;
+import blue.springframework.spring5mvcrest.api.v1.mapper.CategoryMapper;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryDTO;
+import blue.springframework.spring5mvcrest.repositories.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

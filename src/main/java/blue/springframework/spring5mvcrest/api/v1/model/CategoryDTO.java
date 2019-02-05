@@ -1,4 +1,4 @@
-package blue.springframework.api.v1.model;
+package blue.springframework.spring5mvcrest.api.v1.model;
 
 import lombok.Data;
 

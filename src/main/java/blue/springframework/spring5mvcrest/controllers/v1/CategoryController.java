@@ -1,8 +1,8 @@
-package blue.springframework.controllers.v1;
+package blue.springframework.spring5mvcrest.controllers.v1;
 
-import blue.springframework.api.v1.model.CategoryDTO;
-import blue.springframework.api.v1.model.CategoryListDTO;
-import blue.springframework.services.CategoryService;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryDTO;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryListDTO;
+import blue.springframework.spring5mvcrest.services.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

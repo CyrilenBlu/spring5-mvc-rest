@@ -1,4 +1,4 @@
-package blue.springframework.domain;
+package blue.springframework.spring5mvcrest.domain;
 
 import lombok.Data;
 

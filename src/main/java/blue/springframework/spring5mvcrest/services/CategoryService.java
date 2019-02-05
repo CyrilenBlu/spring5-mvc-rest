@@ -1,6 +1,6 @@
-package blue.springframework.services;
+package blue.springframework.spring5mvcrest.services;
 
-import blue.springframework.api.v1.model.CategoryDTO;
+import blue.springframework.spring5mvcrest.api.v1.model.CategoryDTO;
 
 import java.util.List;
 
