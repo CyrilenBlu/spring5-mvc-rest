@@ -16,7 +16,6 @@ import java.util.List;
 
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.hamcrest.core.IsEqual.equalTo;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -60,21 +59,21 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
 
     }
 
-    @Test
-    public void testGetCustomersByLastName() throws Exception {
-        CustomerDTO customer1 = new CustomerDTO();
-        customer1.setId(1l);
-        customer1.setLastname("Ham");
-
-        List<CustomerDTO> customers = Arrays.asList(customer1);
-
-        when(customerService.getCustomerByLastname(anyString())).thenReturn(customer1);
-
-        mockMvc.perform(get("/api/v1/customers/Ham")
-                            .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.lastname", equalTo("Ham")));
-    }
+//    @Test
+//    public void testGetCustomersByLastName() throws Exception {
+//        CustomerDTO customer1 = new CustomerDTO();
+//        customer1.setId(1l);
+//        customer1.setLastname("Ham");
+//
+//        List<CustomerDTO> customers = Arrays.asList(customer1);
+//
+//        when(customerService.getCustomerByLastname(anyString())).thenReturn(customer1);
+//
+//        mockMvc.perform(get("/api/v1/customers/Ham")
+//                            .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.lastname", equalTo("Ham")));
+//    }
 
     @Test
     public void createNewCustomer() throws Exception{
