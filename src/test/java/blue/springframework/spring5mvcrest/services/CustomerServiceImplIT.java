@@ -1,4 +1,4 @@
-package blue.springframework.spring5mvcrest.controllers.v1;
+package blue.springframework.spring5mvcrest.services;
 
 import blue.springframework.spring5mvcrest.api.v1.mapper.CustomerMapper;
 import blue.springframework.spring5mvcrest.api.v1.model.CustomerDTO;
