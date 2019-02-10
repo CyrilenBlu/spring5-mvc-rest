@@ -2,6 +2,7 @@ package blue.springframework.spring5mvcrest.services;
 
 import blue.springframework.spring5mvcrest.api.v1.mapper.CustomerMapper;
 import blue.springframework.spring5mvcrest.api.v1.model.CustomerDTO;
+import blue.springframework.spring5mvcrest.controllers.v1.CustomerController;
 import blue.springframework.spring5mvcrest.domain.Customer;
 import blue.springframework.spring5mvcrest.repositories.CustomerRepository;
 import org.junit.Before;
@@ -95,7 +96,7 @@ public class CustomerServiceImplTest {
         CustomerDTO savedDTO = customerService.createNewCustomer(customerDTO);
 
         assertEquals(customerDTO.getFirstname(), savedDTO.getFirstname());
-        assertEquals("/api/v1/customer/1", savedDTO.getCustomerUrl());
+        assertEquals(CustomerController.BASE_URL + "/1", savedDTO.getCustomerUrl());
     }
 
     @Test
@@ -117,7 +118,7 @@ public class CustomerServiceImplTest {
 
         //then
         assertEquals(customerDTO.getFirstname(), savedDTO.getFirstname());
-        assertEquals("/api/v1/customer/1", savedDTO.getCustomerUrl());
+        assertEquals(CustomerController.BASE_URL + "/1", savedDTO.getCustomerUrl());
     }
 
     @Test
