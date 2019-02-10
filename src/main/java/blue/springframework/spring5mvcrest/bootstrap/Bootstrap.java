@@ -2,8 +2,10 @@ package blue.springframework.spring5mvcrest.bootstrap;
 
 import blue.springframework.spring5mvcrest.domain.Category;
 import blue.springframework.spring5mvcrest.domain.Customer;
+import blue.springframework.spring5mvcrest.domain.Vendor;
 import blue.springframework.spring5mvcrest.repositories.CategoryRepository;
 import blue.springframework.spring5mvcrest.repositories.CustomerRepository;
+import blue.springframework.spring5mvcrest.repositories.VendorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,10 +14,12 @@ public class Bootstrap implements CommandLineRunner {
 
     private CategoryRepository categoryRepository;
     private CustomerRepository customerRepository;
+    private VendorRepository vendorRepository;
 
-    public Bootstrap(CategoryRepository categoryRepository, CustomerRepository customerRepository) {
+    public Bootstrap(CategoryRepository categoryRepository, CustomerRepository customerRepository, VendorRepository vendorRepository) {
         this.categoryRepository = categoryRepository;
         this.customerRepository = customerRepository;
+        this.vendorRepository = vendorRepository;
     }
 
     @Override
@@ -42,7 +46,7 @@ public class Bootstrap implements CommandLineRunner {
         categoryRepository.save(nuts);
 
 
-        System.out.println("Data Loaded = " + categoryRepository.count() );
+        System.out.println("Categories Loaded = " + categoryRepository.count() );
 
         Customer customer1 = new Customer();
         customer1.setFirstname("Susan");
@@ -55,8 +59,17 @@ public class Bootstrap implements CommandLineRunner {
         customerRepository.save(customer1);
         customerRepository.save(customer2);
 
-        System.out.println("Data Loaded = " + customerRepository.count() );
+        System.out.println("Customers Loaded = " + customerRepository.count() );
 
+        Vendor vendor1 = new Vendor();
+        vendor1.setName("Jake");
 
+        Vendor vendor2 = new Vendor();
+        vendor2.setName("Riley");
+
+        vendorRepository.save(vendor1);
+        vendorRepository.save(vendor2);
+
+        System.out.println("Vendors Loaded = " + vendorRepository.count());
     }
 }
