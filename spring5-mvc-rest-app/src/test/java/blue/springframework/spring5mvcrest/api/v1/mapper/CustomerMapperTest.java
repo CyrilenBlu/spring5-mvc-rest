@@ -1,6 +1,6 @@
 package blue.springframework.spring5mvcrest.api.v1.mapper;
 
-import blue.springframework.spring5mvcrest.api.v1.model.CustomerDTO;
+import blue.springframework.model.CustomerDTO;
 import blue.springframework.spring5mvcrest.domain.Customer;
 import org.junit.Test;
 
@@ -23,7 +23,6 @@ public class CustomerMapperTest {
         CustomerDTO customerDTO = customerMapper.customerToCustomerDTO(customer);
 
         //then
-        assertEquals(Long.valueOf(1L), customerDTO.getId());
         assertEquals("Tone", customerDTO.getLastname());
     }
 

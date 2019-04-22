@@ -1,7 +1,7 @@
 package blue.springframework.spring5mvcrest.controllers.v1;
 
-import blue.springframework.spring5mvcrest.api.v1.model.CustomerDTO;
-import blue.springframework.spring5mvcrest.api.v1.model.CustomerListDTO;
+import blue.springframework.model.CustomerDTO;
+import blue.springframework.model.CustomerListDTO;
 import blue.springframework.spring5mvcrest.services.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +22,9 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.OK)
     public CustomerListDTO getAllCustomers()
     {
-        return new CustomerListDTO(customerService.getAllCustomers());
+        CustomerListDTO customerListDTO = new CustomerListDTO();
+        customerListDTO.getCustomers().addAll(customerService.getAllCustomers());
+        return customerListDTO;
     }
 
     @GetMapping("/{id}")

@@ -1,7 +1,7 @@
 package blue.springframework.spring5mvcrest.services;
 
+import blue.springframework.model.CustomerDTO;
 import blue.springframework.spring5mvcrest.api.v1.mapper.CustomerMapper;
-import blue.springframework.spring5mvcrest.api.v1.model.CustomerDTO;
 import blue.springframework.spring5mvcrest.bootstrap.Bootstrap;
 import blue.springframework.spring5mvcrest.domain.Customer;
 import blue.springframework.spring5mvcrest.repositories.CategoryRepository;
